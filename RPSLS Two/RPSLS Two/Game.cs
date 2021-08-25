@@ -12,6 +12,8 @@ namespace RPSLS_Two
         // public int numberOfComputerPlayers;
         public string winner;
         public string loser;
+        public bool playerOneIsHuman;
+        public bool playerTwoIsHuman;
 
         //constructor to start game
         public Game(int numberOfHumanPlayers, string winner, string loser)
@@ -19,7 +21,9 @@ namespace RPSLS_Two
             this.numberOfHumanPlayers = numberOfHumanPlayers;
             this.winner = winner;
             this.loser = loser;
-            
+
+            playerOneIsHuman = false;
+            playerTwoIsHuman = false;
             startGame = true;
         }
 
@@ -29,16 +33,35 @@ namespace RPSLS_Two
             if (numberOfPlayers == "one")
             {
                 numberOfHumanPlayers = 1;
+                playerOneIsHuman = true;
+                playerTwoIsHuman = false;
             }
             else if (numberOfPlayers == "two")
             {
                 numberOfHumanPlayers = 2;
+                playerOneIsHuman = true;
+                playerTwoIsHuman = true;
             }
             else
             {
-                Console.WriteLine("Type 'one' to play against the CPU or 'two' to play against a friend");
+                Console.WriteLine("INVALID INPUT HUMAN! - Again, type 'one' (lowercased) to play against the CPU or 'two' (lowercased) to play against a friend");
                 GetNumberOfHumanPlayers(Console.ReadLine());
             }
         }
+
+        // this method gets the types of players needed based on user input
+        public void GetPlayers()
+        {
+            if (playerOneIsHuman == true)
+            {
+                HumanPlayer PlayerOne = new HumanPlayer()
+            }
+            else
+            {
+
+            }
+        }
+
+
     }
 }

@@ -12,6 +12,9 @@ namespace RPSLS_Two
             // ask for the number of human players
             Console.WriteLine("Type 'one' to play against the CPU or 'two' to play against a friend");
             NewGame.GetNumberOfHumanPlayers(Console.ReadLine());
+
+            // set player types
+            NewGame.GetPlayers();
         }
     }
 }
