@@ -1,0 +1,14 @@
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.exe
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.deps.json
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.runtimeconfig.json
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.runtimeconfig.dev.json
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.dll
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\bin\Debug\netcoreapp3.1\RPSLS Two.pdb
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.csproj.AssemblyReference.cache
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.AssemblyInfoInputs.cache
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.AssemblyInfo.cs
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.csproj.CoreCompileInputs.cache
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.dll
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.pdb
+D:\Files-All\OneDrive\DevCodeCamp\Projects\Week 009\Day 042\RPSLS TWO\RPSLS Two\RPSLS Two\obj\Debug\netcoreapp3.1\RPSLS Two.genruntimeconfig.cache
