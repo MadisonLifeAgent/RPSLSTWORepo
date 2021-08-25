@@ -5,14 +5,14 @@ using System.Text;
 namespace RPSLS_Two
 {
     // this class inherits from it's parent - Player.cs
-    public class HumanPlayer : Player
+    public class ComputerPlayer : Player
     {
         public char selection;
 
-        public HumanPlayer(string playerName)
+        public ComputerPlayer(string playerName)
         {
             this.playerName = playerName;
-            human = true;
+            human = false;
             numberOfWins = 0;
         }
     }
