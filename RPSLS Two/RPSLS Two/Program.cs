@@ -13,27 +13,34 @@ namespace RPSLS_Two
             NumberOfPlayers NewNumberOfPlayers = new NumberOfPlayers(Console.ReadLine());
 
             //create human players
-            CreateHumanPlayer HumanPlayerOne = new CreateHumanPlayer("Player One");
-            CreateHumanPlayer HumanPlayerTwo = new CreateHumanPlayer("Player Two");
+            HumanPlayer HumanPlayerOne = new HumanPlayer("Player One");
+            HumanPlayer HumanPlayerTwo = new HumanPlayer("Player Two");
 
             //create computer player
-            CreateComputerPlayer ComputerPlayer = new CreateComputerPlayer();
+            ComputerPlayer ComputerPlayer = new ComputerPlayer();
+
+            // Create list of options for RSPLS
+            List<Selection> Options = new List<Selection>();
+            Options.Add(new Selection("rock"));
+            Options.Add(new Selection("paper"));
+            Options.Add(new Selection("scissors"));
+            Options.Add(new Selection("lizard"));
+            Options.Add(new Selection("spock"));
+
+            // start the actual game
+            TheGame NewGame = new TheGame(HumanPlayerOne.wins, ComputerPlayer.wins);
+
+            // Get Move from player one
+            Console.WriteLine("Player One, please select your move from the following options:");
+            Console.WriteLine("rock, paper, scissors, lizard, spock");
 
             //Debug line only
-            Console.WriteLine("The Number of Human Players is: " + NewNumberOfPlayers.userInput);
-            Console.WriteLine("Player One's Name is: " + HumanPlayerOne.playerName);
-            Console.WriteLine("Player Two's Name is: " + HumanPlayerTwo.playerName);
-            Console.WriteLine("Computer Player's Name is: " + ComputerPlayer.playerName);
+            Console.WriteLine("This is a list item: " + Options[0].move);
+            Console.WriteLine("Human Score: " + NewGame.playerOneScore);
+            Console.WriteLine("Computer Score: " + NewGame.playerTwoScore);
             Console.ReadLine();
 
 
-            // Create list of options for RSPLS
-/*            List <Option> Options = new List<Option>();
-                Options.Add(new Option("rock"));
-                Options.Add(new Option("paper"));
-                Options.Add(new Option("scissors"));
-                Options.Add(new Option("lizard"));
-                Options.Add(new Option("spock"));*/
 
 
         }
