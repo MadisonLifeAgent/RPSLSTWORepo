@@ -42,15 +42,15 @@ namespace RPSLS_Two
 
             // Gnerate a random number which determines the move for the computer
             GenerateRandomNumber RandomNumber = new GenerateRandomNumber(Options.Count);
+
             // get the actual move from the list of moves and set it into the computer's player object (this needs to be stored so we can compare it to the human player's move)
             Computer.ComputerMoveSelection(Options[RandomNumber.moveListIndex].move);
 
-            // compare moves to see who won
+            //  in the NewGame Object compare moves to see who won the round
             NewGame.DetermineRoundWinner(HumanPlayerOne.playerName, HumanPlayerOne.move, Computer.playerName, Computer.move);
 
 
-
-            //Debug line only
+            //Debug lines only
             Console.WriteLine("Player One Score: " + NewGame.playerOneScore);
             Console.WriteLine("Computer Move: " + Computer.move);
             Console.WriteLine("Computer Score: " + NewGame.playerTwoScore);

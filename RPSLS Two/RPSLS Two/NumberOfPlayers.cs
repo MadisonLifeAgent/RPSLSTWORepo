@@ -9,10 +9,10 @@ namespace RPSLS_Two
         // variable for number of human players
         public string userInput;
 
-        // this helps is where number of human players is validated
+        // this is where number of human players is constructed and validated
         public NumberOfPlayers(string userInput)
         {
-            // only store the user input if their selection is 1 or two
+            // only store the user input if their selection is 1 or 2, otherwise reprompt
             while (userInput != "1" && userInput != "2")
             {
                 Console.WriteLine("INVALID SELECTION! PLEASE TRY AGAIN, HUMAN!");

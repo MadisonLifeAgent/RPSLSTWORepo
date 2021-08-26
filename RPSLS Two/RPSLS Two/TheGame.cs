@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-// This class's main role is to start, determine the winner and end the game
+// This class's main role is to start the game, determine the winner and end the game
 namespace RPSLS_Two
 {
     public class TheGame
     {
-        // where each part of the game is tracked
+        // where parts of the game are tracked
         public bool gameStatus;
         public int playerOneScore;
         public int playerTwoScore;
-        public int winningScore;
-        public string roundWinner; // winner of a single round
-        public string Gamewinner; // winner of 2 rounds
+        public int winningScore;    // number of rounds required to win the  game
+        public string Gamewinner;   // winner of 2 rounds
 
         // constructor to start game
         public TheGame()
@@ -36,13 +35,11 @@ namespace RPSLS_Two
                     }
                     else if (playerTwoMove == "scissors" || playerTwoMove == "lizard")
                     {
-                        this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
                         Console.WriteLine(playerOneName + "WINS the round!");
                     }
                     else
                     {
-                        this.roundWinner = playerTwoName;
                         this.playerTwoScore += 1;
                         Console.WriteLine(playerTwoName + "WINS the round!");
                     }
@@ -54,13 +51,11 @@ namespace RPSLS_Two
                     }
                     else if (playerTwoMove == "paper" || playerTwoMove == "lizard")
                     {
-                        this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
                         Console.WriteLine(playerOneName + "WINS the round!");
                     }
                     else
                     {
-                        this.roundWinner = playerTwoName;
                         this.playerTwoScore += 1;
                         Console.WriteLine(playerTwoName + "WINS the round!");
                     }
@@ -72,13 +67,11 @@ namespace RPSLS_Two
                     }
                     else if (playerTwoMove == "rock" || playerTwoMove == "spock")
                     {
-                        this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
                         Console.WriteLine(playerOneName + "WINS the round!");
                     }
                     else
                     {
-                        this.roundWinner = playerTwoName;
                         this.playerTwoScore += 1;
                         Console.WriteLine(playerTwoName + "WINS the round!");
                     }
@@ -90,13 +83,11 @@ namespace RPSLS_Two
                     }
                     else if (playerTwoMove == "spock" || playerTwoMove == "paper")
                     {
-                        this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
                         Console.WriteLine(playerOneName + "WINS the round!");
                     }
                     else
                     {
-                        this.roundWinner = playerTwoName;
                         this.playerTwoScore += 1;
                         Console.WriteLine(playerTwoName + "WINS the round!");
                     }
@@ -108,13 +99,11 @@ namespace RPSLS_Two
                     }
                     else if (playerTwoMove == "scissors" || playerTwoMove == "rock")
                     {
-                        this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
                         Console.WriteLine(playerOneName + "WINS the round!");
                     }
                     else
                     {
-                        this.roundWinner = playerTwoName;
                         this.playerTwoScore += 1;
                         Console.WriteLine(playerTwoName + "WINS the round!");
                     }
@@ -122,7 +111,6 @@ namespace RPSLS_Two
                 default:
                     break;
             }
-
         }
 
         // this method display message that the game is over
