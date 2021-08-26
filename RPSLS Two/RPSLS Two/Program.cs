@@ -7,11 +7,15 @@ namespace RPSLS_Two
     {
         static void Main(string[] args)
         {
-            // start the game
-            StartEndGame NewGame = new StartEndGame();
+            // Start the game by asking for the number of players and validate user input
+            Console.WriteLine("Type '1' for a SinglePlayer game");
+            Console.WriteLine("Type '2' for a Multi-Player game");
+            NumberOfPlayers NewNumberOfPlayers = new NumberOfPlayers(Console.ReadLine());
 
+            //
             //Debug line only
-            Console.WriteLine(NewGame.gameStatus);
+            Console.WriteLine("The Number of Human Players is: " + NewNumberOfPlayers.userInput);
+            Console.ReadLine();
 
             // create the players
 
@@ -25,9 +29,7 @@ namespace RPSLS_Two
                 Options.Add(new Option("lizard"));
                 Options.Add(new Option("spock"));*/
 
-            // ask for the number of human players
 
-            // get player selections            
         }
     }
 }
