@@ -16,21 +16,25 @@ namespace RPSLS_Two
         public string Gamewinner; // winner of 2 rounds
 
         // constructor to start game
-        public TheGame(int playerOneScore, int playerTwoScore)
+        public TheGame()
         {
             gameStatus = true;
-            this.playerOneScore = playerOneScore;
-            this.playerTwoScore = playerTwoScore;
+            playerOneScore = 0;
+            playerTwoScore = 0;
             winningScore = 2;
         }
 
         // compare players moves to see who won the round and tally up the score
-        public void DetermineRoundWinner(string playerOneName, string playerOneMove, string playerTwoName, string PlayerTwoMove)
+        public void DetermineRoundWinner(string playerOneName, string playerOneMove, string playerTwoName, string playerTwoMove)
         {
             switch (playerOneMove)
             {
                 case "rock":
-                    if (PlayerTwoMove == "scissors" || PlayerTwoMove == "lizard")
+                    if (playerTwoMove == "rock")
+                    {
+                        Console.WriteLine("TIE!  Play again!");
+                    }
+                    else if (playerTwoMove == "scissors" || playerTwoMove == "lizard")
                     {
                         this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
@@ -44,7 +48,11 @@ namespace RPSLS_Two
                     }
                     break;
                 case "scissors":
-                    if (PlayerTwoMove == "paper" || PlayerTwoMove == "lizard")
+                    if (playerTwoMove == "scissors")
+                    {
+                        Console.WriteLine("TIE!  Play again!");
+                    }
+                    else if (playerTwoMove == "paper" || playerTwoMove == "lizard")
                     {
                         this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
@@ -58,7 +66,11 @@ namespace RPSLS_Two
                     }
                     break;
                 case "paper":
-                    if (PlayerTwoMove == "rock" || PlayerTwoMove == "spock")
+                    if (playerTwoMove == "paper")
+                    {
+                        Console.WriteLine("TIE!  Play again!");
+                    }
+                    else if (playerTwoMove == "rock" || playerTwoMove == "spock")
                     {
                         this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
@@ -72,7 +84,11 @@ namespace RPSLS_Two
                     }
                     break;
                 case "lizard":
-                    if (PlayerTwoMove == "spock" || PlayerTwoMove == "paper")
+                    if (playerTwoMove == "lizard")
+                    {
+                        Console.WriteLine("TIE!  Play again!");
+                    }
+                    else if (playerTwoMove == "spock" || playerTwoMove == "paper")
                     {
                         this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
@@ -86,7 +102,11 @@ namespace RPSLS_Two
                     }
                     break;
                 case "spock":
-                    if (PlayerTwoMove == "scissors" || PlayerTwoMove == "rock")
+                    if (playerTwoMove == "spock")
+                    {
+                        Console.WriteLine("TIE!  Play again!");
+                    }
+                    else if (playerTwoMove == "scissors" || playerTwoMove == "rock")
                     {
                         this.roundWinner = playerOneName;
                         this.playerOneScore += 1;
@@ -100,7 +120,6 @@ namespace RPSLS_Two
                     }
                     break;
                 default:
-                    Console.WriteLine("TIE!  Play again!");
                     break;
             }
 

@@ -28,7 +28,7 @@ namespace RPSLS_Two
             Options.Add(new Selection("spock"));
 
             // start the actual game
-            TheGame NewGame = new TheGame(HumanPlayerOne.wins, Computer.wins);
+            TheGame NewGame = new TheGame();
 
             // Display moves
             Console.WriteLine("Player One, please select your move from the following options:");
@@ -45,12 +45,15 @@ namespace RPSLS_Two
             // get the actual move from the list of moves and set it into the computer's player object (this needs to be stored so we can compare it to the human player's move)
             Computer.ComputerMoveSelection(Options[RandomNumber.moveListIndex].move);
 
+            // compare moves to see who won
+            NewGame.DetermineRoundWinner(HumanPlayerOne.playerName, HumanPlayerOne.move, Computer.playerName, Computer.move);
 
 
 
             //Debug line only
-            Console.WriteLine("Random Index: " + RandomNumber.moveListIndex);
-            Console.WriteLine("The computers move is: " + Computer.move);
+            Console.WriteLine("Player One Score: " + NewGame.playerOneScore);
+            Console.WriteLine("Computer Move: " + Computer.move);
+            Console.WriteLine("Computer Score: " + NewGame.playerTwoScore);
 
             Console.ReadLine();
         }

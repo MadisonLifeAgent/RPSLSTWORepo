@@ -7,7 +7,6 @@ namespace RPSLS_Two
 {
     public class Player
     {
-        public int wins;
         public bool human;
         public string move;
 
