@@ -14,7 +14,7 @@ namespace RPSLS_Two
             this.human = true;
         }
 
-        public string PlayerMoveSelection(string moveSelected)
+        public void PlayerMoveSelection(string moveSelected)
         {
             this.selection = moveSelected;
         }

@@ -30,19 +30,18 @@ namespace RPSLS_Two
             // start the actual game
             TheGame NewGame = new TheGame(HumanPlayerOne.wins, ComputerPlayer.wins);
 
-            // Get Move from player one
+            // Display moves and get move from player one
             Console.WriteLine("Player One, please select your move from the following options:");
-            Console.WriteLine("rock, paper, scissors, lizard, spock");
+            foreach (Selection move in Options)
+            {
+                Console.WriteLine("-  " + move.move);
+            }
+            HumanPlayerOne.PlayerMoveSelection(Console.ReadLine());
 
             //Debug line only
-            Console.WriteLine("This is a list item: " + Options[0].move);
-            Console.WriteLine("Human Score: " + NewGame.playerOneScore);
-            Console.WriteLine("Computer Score: " + NewGame.playerTwoScore);
+            Console.WriteLine("This is a list item: " + Options[4].move);
+            Console.WriteLine("Human move: " + HumanPlayerOne.selection);
             Console.ReadLine();
-
-
-
-
         }
     }
 }

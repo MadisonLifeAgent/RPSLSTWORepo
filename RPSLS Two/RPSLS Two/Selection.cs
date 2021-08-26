@@ -15,5 +15,6 @@ namespace RPSLS_Two
         {
             this.move = move;
         }
+
     }
 }
