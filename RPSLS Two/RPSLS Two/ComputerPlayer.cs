@@ -8,10 +8,17 @@ namespace RPSLS_Two
     {
         public string playerName;
 
+        //constructor for instantiation
         public ComputerPlayer()
         {
             playerName = "Computer Player";
             this.human = false;
+        }
+
+        // stores computer's move
+        public void ComputerMoveSelection(string moveSelected)
+        {
+            this.move = moveSelected;
         }
     }
 }

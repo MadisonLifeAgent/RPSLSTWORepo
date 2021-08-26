@@ -16,7 +16,7 @@ namespace RPSLS_Two
 
         public void PlayerMoveSelection(string moveSelected)
         {
-            this.selection = moveSelected;
+            this.move = moveSelected;
         }
     }
 }

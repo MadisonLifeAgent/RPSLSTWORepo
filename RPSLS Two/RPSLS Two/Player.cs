@@ -9,12 +9,11 @@ namespace RPSLS_Two
     {
         public int wins;
         public bool human;
-        public string selection;
+        public string move;
 
         public Player()
         {
-            selection = "";
-            wins = 0;
+
         }
     }
 }

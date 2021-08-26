@@ -17,7 +17,7 @@ namespace RPSLS_Two
             HumanPlayer HumanPlayerTwo = new HumanPlayer("Player Two");
 
             //create computer player
-            ComputerPlayer ComputerPlayer = new ComputerPlayer();
+            ComputerPlayer Computer = new ComputerPlayer();
 
             // Create list of options for RSPLS
             List<Selection> Options = new List<Selection>();
@@ -28,19 +28,30 @@ namespace RPSLS_Two
             Options.Add(new Selection("spock"));
 
             // start the actual game
-            TheGame NewGame = new TheGame(HumanPlayerOne.wins, ComputerPlayer.wins);
+            TheGame NewGame = new TheGame(HumanPlayerOne.wins, Computer.wins);
 
-            // Display moves and get move from player one
+            // Display moves
             Console.WriteLine("Player One, please select your move from the following options:");
             foreach (Selection move in Options)
             {
                 Console.WriteLine("-  " + move.move);
             }
+
+            // get move from player one
             HumanPlayerOne.PlayerMoveSelection(Console.ReadLine());
 
+            // Gnerate a random number which determines the move for the computer
+            GenerateRandomNumber RandomNumber = new GenerateRandomNumber(Options.Count);
+            // get the actual move from the list of moves and set it into the computer's player object (this needs to be stored so we can compare it to the human player's move)
+            Computer.ComputerMoveSelection(Options[RandomNumber.moveListIndex].move);
+
+
+
+
             //Debug line only
-            Console.WriteLine("This is a list item: " + Options[4].move);
-            Console.WriteLine("Human move: " + HumanPlayerOne.selection);
+            Console.WriteLine("Random Index: " + RandomNumber.moveListIndex);
+            Console.WriteLine("The computers move is: " + Computer.move);
+
             Console.ReadLine();
         }
     }
