@@ -12,7 +12,7 @@ namespace RPSLS_Two
         public HumanPlayer(string playerName)
         {
             this.playerName = playerName;
-            this.human = true;
+            human = true;
         }
 
         // stores player move selection
