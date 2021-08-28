@@ -12,7 +12,6 @@ namespace RPSLS_Two
 
         public Player()
         {
-
         }
     }
 }

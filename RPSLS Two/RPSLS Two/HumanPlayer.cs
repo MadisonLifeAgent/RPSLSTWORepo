@@ -15,10 +15,10 @@ namespace RPSLS_Two
             human = true;
         }
 
-        // stores player move selection
-        public void PlayerMoveSelection(string moveSelected)
+        public void MoveSelection(string moveSelected)
         {
             this.move = moveSelected;
         }
+
     }
 }
