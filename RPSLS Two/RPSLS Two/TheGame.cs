@@ -44,14 +44,14 @@ namespace RPSLS_Two
             HumanPlayer HumanPlayerTwo = new HumanPlayer("PlayerTwo");
             ComputerPlayer Computer = new ComputerPlayer();
 
-
+            // while there is no game winner keep getting move selection from player(s)
             while (playerOneScore < 2 && playerTwoScore < 2)
             {
                 // display moves and get player moves
                 if (numberOfHumanPlayers == "1")
                 {
                     //display move options
-                    Console.WriteLine("Player One, please select your move from the following options:");
+                    Console.WriteLine("\nPlayer One, please select your move from the following options:");
                     foreach (Selection move in Options)
                     {
                         Console.WriteLine("-  " + move.move);
@@ -69,20 +69,24 @@ namespace RPSLS_Two
 
                     // compare moves and determine winner
                     DetermineRoundWinner(HumanPlayerOne.playerName, HumanPlayerOne.move, Computer.playerName, Computer.move);
-                }
-                Console.WriteLine("p1: " + playerOneScore);
-                Console.WriteLine("p2: " + playerTwoScore);
 
+                    // display current score
+                    Console.WriteLine("\n----------SCOREBOARD----------\n"
+                        + "Player One:  " + playerOneScore + "\n"
+                        + "Player Two:  " + playerTwoScore + "\n"
+                        + "------------------------------");
+                }
+                Console.WriteLine("c:  " + Computer.move);
             }
 
             // display the winner
             if (playerOneScore == 2)
             {
-                Console.WriteLine(HumanPlayerOne.playerName + " Wins the Game!!!");
+                Console.WriteLine("\n" + HumanPlayerOne.playerName + " Wins the Game!!! 8) \nGame Over");
             }
             else if (playerTwoScore == 2)
             {
-                Console.WriteLine(Computer.playerName + " Wins the Game!!!");
+                Console.WriteLine("\n" + Computer.playerName + " Wins the Game!!! 8( \nGame Over!");
             }
 
             else if (numberOfHumanPlayers == "2")
@@ -102,13 +106,6 @@ namespace RPSLS_Two
                 Console.WriteLine("Player Two:  ");
                 HumanPlayerTwo.MoveSelection(Console.ReadLine());
             }
-
-            // determine round winner
-
-
-            Console.WriteLine("h1:  " + HumanPlayerOne.move);
-            Console.WriteLine("c:  " + Computer.move);
-            Console.WriteLine("h2:  " + HumanPlayerTwo.move);
         }
 
 
@@ -123,91 +120,91 @@ namespace RPSLS_Two
                     case "rock":
                         if (playerTwoMove == "rock")
                         {
-                            Console.WriteLine("TIE!  Play again!");
+                            Console.WriteLine("\nTIE!  Play again!");
                             break;
                         }
                         else if (playerTwoMove == "scissors" || playerTwoMove == "lizard")
                         {
                             this.playerOneScore += 1;
-                            Console.WriteLine(playerOneName + "WINS the round!");
+                            Console.WriteLine("\n" + playerOneName + "WINS the round!");
                             break;
                         }
                         else
                         {
                             this.playerTwoScore += 1;
-                            Console.WriteLine(playerTwoName + "WINS the round!");
+                            Console.WriteLine("\n" + playerTwoName + "WINS the round!");
                             break;
                         }
                     case "scissors":
                         if (playerTwoMove == "scissors")
                         {
-                            Console.WriteLine("TIE!  Play again!");
+                            Console.WriteLine("\n TIE!  Play again!");
                             break;
                         }
                         else if (playerTwoMove == "paper" || playerTwoMove == "lizard")
                         {
                             this.playerOneScore += 1;
-                            Console.WriteLine(playerOneName + "WINS the round!");
+                            Console.WriteLine("\n" + playerOneName + "WINS the round!");
                             break;
                         }
                         else
                         {
                             this.playerTwoScore += 1;
-                            Console.WriteLine(playerTwoName + "WINS the round!");
+                            Console.WriteLine("\n" + playerTwoName + "WINS the round!");
                             break;
                         }
                     case "paper":
                         if (playerTwoMove == "paper")
                         {
-                            Console.WriteLine("TIE!  Play again!");
+                            Console.WriteLine("\n TIE!  Play again!");
                             break;
                         }
                         else if (playerTwoMove == "rock" || playerTwoMove == "spock")
                         {
                             this.playerOneScore += 1;
-                            Console.WriteLine(playerOneName + "WINS the round!");
+                            Console.WriteLine("\n" + playerOneName + "WINS the round!");
                             break;
                         }
                         else
                         {
                             this.playerTwoScore += 1;
-                            Console.WriteLine(playerTwoName + "WINS the round!");
+                            Console.WriteLine("\n" + playerTwoName + "WINS the round!");
                             break;
                         }
                     case "lizard":
                         if (playerTwoMove == "lizard")
                         {
-                            Console.WriteLine("TIE!  Play again!");
+                            Console.WriteLine("\n TIE !  Play again!");
                             break;
                         }
                         else if (playerTwoMove == "spock" || playerTwoMove == "paper")
                         {
                             this.playerOneScore += 1;
-                            Console.WriteLine(playerOneName + "WINS the round!");
+                            Console.WriteLine("\n" + playerOneName + "WINS the round!");
                             break;
                         }
                         else
                         {
                             this.playerTwoScore += 1;
-                            Console.WriteLine(playerTwoName + "WINS the round!");
+                            Console.WriteLine("\n" + playerTwoName + "WINS the round!");
                             break;
                         }
                     case "spock":
                         if (playerTwoMove == "spock")
                         {
-                            Console.WriteLine("TIE!  Play again!");
+                            Console.WriteLine("\n TIE !  Play again!");
                             break;
                         }
                         else if (playerTwoMove == "scissors" || playerTwoMove == "rock")
                         {
                             this.playerOneScore += 1;
-                            Console.WriteLine(playerOneName + "WINS the round!");
+                            Console.WriteLine("\n" + playerOneName + "WINS the round!");
                             break;
                         }
                         else
                         {
                             this.playerTwoScore += 1;
-                            Console.WriteLine(playerTwoName + "WINS the round!");
+                            Console.WriteLine("\n" + playerTwoName + "WINS the round!");
                             break;
                         }
                     default:
