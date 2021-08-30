@@ -13,6 +13,7 @@ namespace RPSLS_Two
         {
             playerName = "Computer Player";
             this.human = false;
+            this.move = "";
         }
 
         // stores computer's move
